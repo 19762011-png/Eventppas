@@ -1,0 +1,556 @@
+   /* =========================================
+   VARIABLES
+========================================= */
+
+:root {
+
+    --fondo: #6ce23d;
+    --tarjeta: #ffffff;
+    --texto: #1f2937;
+    --texto-suave: #64748b;
+
+    --principal: #2563eb;
+    --principal-hover: #1d4ed8;
+
+    --borde: #dbe3ef;
+
+    --exito: #16a34a;
+    --error: #dc2626;
+
+    --sombra: 0 10px 30px rgba(0, 0, 0, 0.10);
+}
+
+
+/* =========================================
+   MODO OSCURO
+========================================= */
+
+body.oscuro {
+
+    --fondo: #180241;
+    --tarjeta: #1e293b;
+
+    --texto: #f8fafc;
+    --texto-suave: #cbd5e1;
+
+    --borde: #334155;
+
+    --sombra:
+        0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================================
+   CONFIGURACIÓN GENERAL
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    margin: 0;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: var(--fondo);
+
+    color: var(--texto);
+
+    transition:
+        background 0.3s,
+        color 0.3s;
+}
+
+
+/* =========================================
+   BOTÓN DE TEMA
+========================================= */
+
+.modo-btn {
+
+    position: fixed;
+
+    top: 20px;
+    right: 20px;
+
+    z-index: 1000;
+
+    border: none;
+
+    padding: 10px 15px;
+
+    border-radius: 10px;
+
+    background: var(--tarjeta);
+
+    color: var(--texto);
+
+    box-shadow: var(--sombra);
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+.modo-btn:hover {
+    transform: scale(1.03);
+}
+
+
+/* =========================================
+   OCULTAR ELEMENTOS
+========================================= */
+
+.oculto {
+    display: none !important;
+}
+
+
+/* =========================================
+   LOGIN
+========================================= */
+
+.pantalla-login {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 90px 20px 30px;
+}
+
+.tarjeta {
+
+    width: 100%;
+
+    max-width: 430px;
+
+    background: var(--tarjeta);
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    box-shadow: var(--sombra);
+
+    border: 1px solid var(--borde);
+}
+
+.logo {
+
+    width: 70px;
+    height: 70px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 38px;
+
+    border-radius: 50%;
+
+    background: #dbeafe;
+}
+
+.tarjeta h1 {
+
+    text-align: center;
+
+    margin: 5px 0;
+}
+
+.tarjeta h2 {
+
+    text-align: center;
+
+    margin-top: 30px;
+}
+
+.subtitulo {
+
+    text-align: center;
+
+    color: var(--texto-suave);
+}
+
+
+/* =========================================
+   FORMULARIOS
+========================================= */
+
+label {
+
+    display: block;
+
+    margin-top: 15px;
+
+    margin-bottom: 7px;
+
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border-radius: 9px;
+
+    border: 1px solid var(--borde);
+
+    background: var(--tarjeta);
+
+    color: var(--texto);
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+
+    border-color: var(--principal);
+}
+
+textarea {
+    resize: vertical;
+}
+
+
+/* =========================================
+   BOTONES
+========================================= */
+
+button {
+    font-family: inherit;
+}
+
+.btn-principal {
+
+    width: 100%;
+
+    margin-top: 20px;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: var(--principal);
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.btn-principal:hover {
+    background: var(--principal-hover);
+}
+
+.btn-secundario {
+
+    width: 100%;
+
+    margin-top: 10px;
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    border: 1px solid var(--principal);
+
+    background: transparent;
+
+    color: var(--principal);
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+    
+.btn-secundario:hover {
+
+    background: var(--principal);
+
+    color: white;
+}
+
+
+/* =========================================
+   CERRAR SESIÓN
+========================================= */
+
+.btn-cerrar {
+
+    margin-top: 15px;
+
+    padding: 10px 16px;
+
+    border: 1px solid var(--error);
+
+    border-radius: 10px;
+
+    background: transparent;
+
+    color: var(--error);
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.btn-cerrar:hover {
+
+    background: var(--error);
+
+    color: white;
+}
+
+
+/* =========================================
+   TEXTO REGISTRO
+========================================= */
+
+.texto-registro {
+
+    text-align: center;
+
+    color: var(--texto-suave);
+
+    margin-top: 25px;
+}
+
+
+/* =========================================
+   MENSAJES
+========================================= */
+
+.mensaje {
+
+    text-align: center;
+
+    font-weight: bold;
+
+    min-height: 20px;
+
+    margin-top: 15px;
+}
+
+
+/* =========================================
+   APLICACIÓN
+========================================= */
+
+#appContainer {
+
+    width: 100%;
+
+    max-width: 1000px;
+
+    margin: auto;
+
+    padding: 100px 20px 50px;
+}
+
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+.encabezado {
+
+    background: var(--tarjeta);
+
+    border: 1px solid var(--borde);
+
+    padding: 25px;
+
+    border-radius: 18px;
+
+    margin-bottom: 20px;
+
+    box-shadow: var(--sombra);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.encabezado h1 {
+    margin: 0;
+}
+
+.encabezado p {
+
+    color: var(--texto-suave);
+
+    margin-bottom: 0;
+}
+
+
+/* =========================================
+   TARJETAS
+========================================= */
+
+.usuario-card,
+.reserva-card,
+.comprobante {
+
+    background: var(--tarjeta);
+
+    border: 1px solid var(--borde);
+
+    border-radius: 18px;
+
+    padding: 25px;
+
+    margin-bottom: 20px;
+
+    box-shadow: var(--sombra);
+}
+
+.usuario-card h2,
+.reserva-card h2 {
+    margin-top: 0;
+}
+
+
+/* =========================================
+   DATOS USUARIO
+========================================= */
+
+.datos-usuario {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+.datos-usuario label {
+    margin-top: 0;
+}
+
+
+/* =========================================
+   FIELDSET
+========================================= */
+
+fieldset {
+
+    border: 1px solid var(--borde);
+
+    border-radius: 12px;
+
+    padding: 20px;
+}
+
+legend {
+
+    padding: 0 10px;
+
+    font-weight: bold;
+
+    color: var(--principal);
+}
+
+
+/* =========================================
+   RESUMEN
+========================================= */
+
+.resumen {
+
+    margin-top: 25px;
+
+    padding: 20px;
+
+    border-radius: 14px;
+
+    background: var(--fondo);
+
+    border: 1px solid var(--borde);
+}
+
+.resumen h3 {
+    margin-top: 0;
+}
+
+.fila {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 10px 0;
+}
+
+@media print {
+
+    body * {
+        visibility: hidden !important;
+    }
+
+    #comprobante,
+    #comprobante * {
+        visibility: visible !important;
+    }
+
+    #comprobante {
+        display: block !important;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        margin: 0;
+        padding: 20px;
+        box-sizing: border-box;
+        background: white;
+        color: black;
+    }
+
+    .botones-ticket {
+        display: none !important;
+    }
+}
